@@ -1,5 +1,5 @@
 class Queue {
-    QNode front, rear;
+    Node front, rear;
  
     public Queue()
     {
@@ -8,7 +8,7 @@ class Queue {
     public void enqueue(int key)
     {
 
-        QNode temp = new QNode(key);
+        Node temp = new Node(key);
         if (this.rear == null) {
             this.front = this.rear = temp;
             return;
@@ -24,7 +24,7 @@ class Queue {
         if (this.front == null)
             return;
  
-        QNode temp = this.front;
+        Node temp = this.front;
         this.front = this.front.next;
         
         if (this.front == null)
